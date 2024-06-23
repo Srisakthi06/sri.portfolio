@@ -1,0 +1,668 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: rgb(17, 16, 16);
+}
+html{
+   scroll-behavior:smooth;
+}
+
+body{
+    background: url("images/leaves_bushes_green_174515_3840x2400.jpg") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.favicon{
+    border-radius: 50%;
+}
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+
+.navbar {
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    
+}
+
+.navbar.sticky {
+    padding: 30px 0;
+    box-shadow: 0px 10px 50px 5px #00000038;
+}
+
+.navbar.sticky::before {
+    content: ''; 
+    position: absolute;
+    opacity: 1;
+    top: -10px;
+    left: -10px;
+    width: 105vw;
+    height:110%;
+    z-index: -1;
+    filter: blur(1.5px);
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: rgb(0, 0, 0)4, 40, 40);
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span {
+    color: #23b410;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: white;
+}
+.navbar .menu ul{
+    
+    padding: 0; 
+    list-style: none; 
+    display: table;
+    width: 600px;
+    text-align: center;
+}
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+ 
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.navbar .menu a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .navbar .menu a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+.navbar .menu li a:hover {
+    color: #23b410;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: white;
+}
+
+.menu-btn{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.home {
+    display: flex;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: white;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .max-width .home-content{
+    padding-top: 220px;
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: #25e70c;
+    font-weight: 500;
+}
+
+/* all similar styling */
+section{
+    padding: 120px 0;
+    padding-bottom: 300px;
+}
+.about, .services, .skills, .contact, footer{
+    font-family: 'Poppins',sans-serif;
+}
+.about .about-content, .services .serv-content, .skills .skills-content, .contact, .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    color: #23b410;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 80px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: green;
+    transform: translateX(-50%);
+}
+section .title::after{
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    font-size: 20px;
+    color: #23b410;
+    padding: 5px;
+    background: black;
+    transform: translateX(-50%);
+}
+/* about section styling */
+.about{
+    background-size: 2000px;
+    height: 600px;
+    
+}
+
+.about .about-content .left{
+   width: 45%;
+}
+.about .about-content .left img{
+    height: 370px;
+    width: 370px;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.about .about-content .left img:hover{
+    transform: scale(1.05);
+}
+.about .about-content .right{
+    width: 55%;
+ }
+ .about .about-content .right .text{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+ }
+ .about .about-content .right .text span{
+     color: #23b410;
+ }
+ .about .about-content .right .paragraph{
+     color: white;
+     font-size: 18px;
+ }
+ .about .about-content .right .p{
+     text-align: justify;
+ }
+ .about .about-content .right a{
+    display: inline-block;
+    background: none;
+    color: #23b410;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 5px 30px;
+    border-radius: 6px;
+    border: 2px solid #23b410;
+    transition: all 0.3s ease;
+ }
+ .about .about-content .right a:hover{
+     color: white;
+     background:none;
+ }
+
+ .about .about-content .button button{
+    width: 100%;
+    height: 100%;
+    border: 0.0px solid #23b410;
+    background: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.about .about-content .button button:hover{
+    background: none;
+    color: #23b410;
+}
+ 
+ /* services styling */
+ .education{
+     color: white;
+     background:black;
+     background: url("images/leaves_bushes_green_174515_3840x2400.jpg");
+     background-size: 2000px;
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 0px;
+     height: 700px;
+ }
+ .education .title::before{
+    background: white;
+}
+
+ .education .edu-content .card{
+    margin-top: 10px;
+     width: calc(33% - 20px);
+     text-align:center;
+     background:none;
+     border-radius: 6px;
+     padding: 20px 25px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+ }
+
+ .education .edu-content .card p{
+    font-size: 20px;
+ }
+
+ .education .edu-content .card h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+ }
+ .education .edu-content .card h5{
+    font-size: 18px;
+    margin-bottom: 10px;
+ }
+ .education .edu-content .card:hover {
+     background:  none;
+ }
+ .education .edu-content .card .box{
+      transition: all 0.3s ease;
+      box-shadow: 2px  #fff;
+      height: 300px;
+      width: 225px;
+      margin-top: 40px;
+      padding-top: 5px;
+      padding-right: 20px;
+      border-right: 0.1rem solid rgb(71, 233, 8);
+ }
+ .education .edu-content .card:hover .box{
+    -webkit-filter: drop-shadow(0 0 10px #08e701);
+    filter: drop-shadow(0 0 10px #08e701);
+    transform: scale(1.05);
+}
+
+
+.education .edu-content .card .text {
+     font-size: 25px;
+     font-weight: 500;
+     margin: 20px 0 7px 0;
+     height: 70px;
+ }
+
+ .education .edu-content{
+    display: flex;
+    flex-direction: row;
+ }
+
+/* Skills Section Styling */
+
+.skills{
+    background: url("images/leaves_bushes_green_174515_3840x2400.jpg");
+    background-size: 2000px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    height: 600px;
+}
+
+.skills .skills-content{
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+ .skills .skills-content .right .icons{
+     height: 100px ;
+     width: 500px;
+     font-size: 50px;
+     color: white;
+     display: flex;
+     margin-bottom: 5px;
+     align-items: center;
+     justify-content: space-between;
+     transition: all 0.3s ease;
+     padding-top: 20px;
+     
+ }
+ .skills .skills-content .right .icons img{
+    background-size: 80px 80px 80px 80px;
+    background-color: #fff;
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    /* padding-right: 40px;
+    padding-left: 40px; */
+    transition: all 0.3s ease;
+    color: white;
+ }
+ .skills .skills-content .right .icons img:hover{
+    transform: scale(1.20);
+    border-radius: 10px;
+ }
+ 
+ #css-icon:hover{
+    -webkit-filter: drop-shadow(0 0 10px #264de4);
+    filter: drop-shadow(0 0 10px #264de4);
+ }
+ #js-icon:hover{
+    -webkit-filter: drop-shadow(0 0 10px #f0db4f);
+    filter: drop-shadow(0 0 10px #f0db4f);
+}
+ #react-js-icon:hover{
+    -webkit-filter: drop-shadow(0 0 10px #61DBFB);
+    filter: drop-shadow(0 0 10px #61DBFB);
+ }
+ #django-icon:hover{
+    -webkit-filter: drop-shadow(0 0 10px #07a01b);
+    filter: drop-shadow(0 0 10px #07a01b);
+ }
+ #mongodb-icon:hover{
+    -webkit-filter: drop-shadow(0 0 10px #07a01b);
+    filter: drop-shadow(0 0 10px #07a01b);
+ }
+ #html-icon:hover{
+    -webkit-filter: drop-shadow(0 0 10px #e34c26);
+    filter: drop-shadow(0 0 10px #e34c26);
+ }
+ #python-icon:hover{
+     -webkit-filter: drop-shadow(0 0 10px #0078d7);
+    filter: drop-shadow(0 0 10px #0078d7);
+ }
+ #nodejs-icon:hover{
+     -webkit-filter: drop-shadow(0 0 10px #3c873a);
+    filter: drop-shadow(0 0 10px #3c873a);
+ }
+ #cpp-icon:hover{
+    -webkit-filter: drop-shadow(0 0 10px #0080ff);
+    filter: drop-shadow(0 0 10px #0080ff);
+}
+#vs-code-icon:hover{
+    -webkit-filter: drop-shadow(0 0 10px #0080ff);
+    filter: drop-shadow(0 0 10px #0080ff);
+}
+#java-icon:hover{
+    -webkit-filter: drop-shadow(0 0 10px #0080ff);
+    filter: drop-shadow(0 0 10px #0080ff);
+}
+#sql-icon:hover{
+    -webkit-filter: drop-shadow(0 0 10px #0080ff);
+    filter: drop-shadow(0 0 10px #0080ff);
+}
+
+.certificate{
+    color: white;
+    background:black;
+    background: url("images/leaves_bushes_green_174515_3840x2400.jpg");
+    background-size: 2000px;
+    height: 650px;
+    display: flex;
+    align-items: center;  
+}
+.certificate .title::before{
+   background: white;
+}
+
+.certificate .icons li{
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+
+/* project styling */
+.project{
+    color: white;
+    background:black;
+    background: url("images/leaves_bushes_green_174515_3840x2400.jpg");
+    background-size: 2000px;
+    height: 650px;
+    
+}
+.project .title::before{
+   background: white;
+}
+
+.project .project-content .card{
+    width: calc(40% - 50px);
+    text-align:left;
+    background:none;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project .project-content .card .box{
+     height: 350px;
+     width: 450px;
+     text-align: center;
+     transition: all 0.3s ease;
+}
+.project .project-content .card:hover .box{
+     -webkit-filter: drop-shadow(0 0 20px #23b410);
+     filter: drop-shadow(0 0 20px #23b410);
+     transform: scale(1.05);
+     border-radius: 20px;
+}
+
+.project .project-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    height: 70px;
+    border-radius: 20px;
+}
+
+.project .project-content .card .text , h3 , h4 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+} 
+
+.project .project-content .card  p{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    text-align: left;
+}
+
+.project .project-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+ }
+ 
+/* contact section styling */
+ .contact{
+    background: url("images/leaves_bushes_green_174515_3840x2400.jpg");
+    background-size: 2000px;
+    height: 650px;
+ }
+ 
+
+ .contact .contact-content .column{
+     width: calc(50% - 30px);
+ }
+ .contact .contact-content .text{
+     color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;  
+}
+ .contact .contact-content .left p{
+     text-align: justify;
+ }
+ .contact .contact-content .left .paragraph-3{
+     font-size: 18px;
+     color: white;
+ }
+ .contact .contact-content .left .icons{
+     margin: 10px 0;
+ }
+ .contact .contact-content .row{
+     display: flex;
+     height: 65px;
+     align-items: center;
+ }
+ .contact .contact-content .row .info{
+     margin-left: 30px;
+ }
+ .contact .contact-content .row i{
+     font-size: 25px;
+     color: #23b410;
+ }
+ .contact .contact-content .info .head{
+     color: white;
+     font-weight: 500;
+ }
+ .contact .contact-content .info  .sub-title{
+    color: white;
+}
+.contact .right form .fields{
+   display: flex;
+}
+.contact .right form .field,.contact .right form .fields .field{
+   height: 45px;
+   width: 100%;
+   margin-bottom: 15px;
+}
+
+.contact a{
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+
+.contact .right form .textarea{
+   height: 80px;
+   width: 100%;
+
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+
+.contact .right form .email{
+    margin-left: 10px;
+}
+
+.contact .right form .field input,.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border:2px solid #23b410;
+    color: white;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    background: none;
+    font-family: 'Poppins', sans-serif;
+}
+.contact .right form .textarea textarea{
+     padding-top: 10px;
+     resize: none;
+}
+.contact .right form .button{
+    height: 47px;
+    width: 170px;
+}
+
+.contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 0.1px solid #23b410;
+    background: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.contact .right form .button button:hover{
+    background: none;
+    color: #23b410;
+}
+
+/* footer styling */
+footer{
+    background: url("#") ;
+    padding: 20px 23px;
+    color: white;
+    
+}
+
+footer .text-center {
+    text-align: center !important; }
+
+footer span a{
+    color: #23b410;
+    transition: color 0.3s ease;
+}
+
+footer span a:hover{
+    color: white;
+}
+
